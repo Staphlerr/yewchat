@@ -11,9 +11,7 @@ pub struct WebsocketService {
 
 impl WebsocketService {
     pub fn new() -> Self {
-        // ganti baris ini di websocket.rs:
-        let ws = WebSocket::open("wss://ws.postman-echo.com/raw").unwrap();
-
+        let ws = WebSocket::open("ws://127.0.0.1:8080/ws/chat").unwrap();
 
         let (mut write, mut read) = ws.split();
 
